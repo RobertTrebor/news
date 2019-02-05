@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  <h1>Hello Spring MVC, PROFILE</h1>
+
+  <!--/*@thymesVar id="newsUser" type="de.gainc.news.NewsUser"*/-->
+  <h1 th:text="${'Hello '+newsUser.firstname}">Firstname</h1>
+
+</body>
+</html>

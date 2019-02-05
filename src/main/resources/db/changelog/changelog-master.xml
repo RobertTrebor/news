@@ -1,0 +1,22 @@
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  objectQuotingStrategy="QUOTE_ALL_OBJECTS"
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+  <changeSet author="robert" id="create-order-table">
+    <createTable tableName="NEWSUSER">
+      <column name="USERNAME" type="VARCHAR(255)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="FIRSTNAME" type="VARCHAR(255)"/>
+      <column name="LASTNAME" type="VARCHAR(255)"/>
+      <column name="BIRTHDAY" type="DATE"/>
+      <column name="PASSWORD" type="VARCHAR(255)"/>
+    </createTable>
+  </changeSet>
+  <changeSet author="thomas" id="create-order-table-pkey">
+    <addPrimaryKey columnNames="USERNAME" constraintName="USERNAME_PK" tableName="NEWSUSER"/>
+  </changeSet>
+
+</databaseChangeLog>

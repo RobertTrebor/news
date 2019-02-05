@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Breaking News</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  <h1>Hello Spring MVC, Breaking NEWS</h1>
+
+  <div class="container">
+    <h1>Breaking News</h1>
+    <table class="table">
+      <tr th:each="item :${news}">
+        <td th:text="${item.title}">Title</td>
+        <td th:text="${item.description}">Description</td>
+      </tr>
+    </table>
+    <form method="POST" th:action="@{/logout}">
+      <button class="btn btn-primary" type="submit">Logout</button>
+    </form>
+  </div>
+
+</body>
+</html>
